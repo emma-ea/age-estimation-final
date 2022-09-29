@@ -231,6 +231,14 @@ def main():
             val_writer.add_scalar("acc", val_acc, epoch)
             val_writer.add_scalar("mae", val_mae, epoch)
 
+            # add model graphs
+            imgs_gr_train, _ = next(iter(train_loader))
+            imgs_gr_val, _ = next(iter(val_loader))
+            imgs_gr_train = imgs_gr_train.to(device)
+            imgs_gr_val = imgs_gr_val.to(device)
+            train_writer.add_graph(model, imgs_gr_train)
+            val_writer.add_graph(model, imgs_gr_val)
+
         # checkpoint
         if val_mae < best_val_mae:
             print(f"=> [epoch {epoch:03d}] best val mae was improved from {best_val_mae:.3f} to {val_mae:.3f}")
