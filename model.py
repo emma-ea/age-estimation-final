@@ -3,7 +3,7 @@ import torch.nn as nn
 import pretrainedmodels
 import pretrainedmodels.utils
 
-from torchsummary import summary
+# from torchsummary import summary
 
 import ssl
 
