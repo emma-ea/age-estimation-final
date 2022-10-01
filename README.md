@@ -1,5 +1,7 @@
 # Age estimation project - final year project
 
+model training was done in google colab, the notebook file is stored in the colab_notebook directory.
+
 # Dataset
 
 To download dataset to main directory. Run bash script in data directory or simply click this hyperlink to download dataset.
@@ -15,15 +17,15 @@ requirements.txt file using this command.
 
 1. Create virtual environment
 
-python -m pip install venv
+`python -m pip install venv`
 
-python -m venv my-environment
+`python -m venv my-environment`
 
-source env/bin/activate
+`source env/bin/activate`
 
 2. Install modules into virtual environment
 
-pip install -r requirement.txt
+`pip install -r requirement.txt`
 
 
 # Running code
@@ -43,33 +45,33 @@ Run this script by passing in the dataset directory to explore the dataset.
 
 for help: `python dataset.py -h`
 
-eg: python dataset.py --data_dir data/appa-real-database/
+eg: `python dataset.py --data_dir data/appa-real-database/`
 
 ## train.py
 
 Run this script if you want to train the model.
 
-for help: python train.py -h
+for help: `python train.py -h`
 
-eg: python train.py --data_dir data/appa-real-database/ --tensorboard ./tf_log/
+eg: `python train.py --data_dir data/appa-real-database/ --tensorboard ./tf_log/`
 
 
 ## test.py
 
 Run this script after training if you want to test a saved model.
 
-for help: python test.py -h
+for help: `python test.py -h`
 
-eg: python test.py --data_dir data/appa-real-database/ --resume checkpoint/path-to-saved-model-weights
+eg: `python test.py --data_dir data/appa-real-database/ --resume checkpoint/path-to-saved-model-weights`
 
 ## demo.py
 
 Run this file if you want to test model using a live webcam or photo
 
-for help: python demo.py -h
+for help: `python demo.py -h`
 
-eg using an image: python demo.py --resume checkpoint/path-to-saved-model-weights --img_dir path-to-input-image --output_dir path-to-output-directory
+eg using an image: `python demo.py --resume checkpoint/path-to-saved-model-weights --img_dir path-to-input-image --output_dir path-to-output-directory`
 
-eg using webcam: python demo.py --resume checkpoint/path-to-saved-model-weights
+eg using webcam: `python demo.py --resume checkpoint/path-to-saved-model-weights`
 
 
