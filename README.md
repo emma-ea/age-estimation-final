@@ -4,7 +4,7 @@ model training was done in google colab, the notebook file is stored in the cola
 
 # Dataset
 
-To download dataset to main directory. Run bash script in data directory or simply click this hyperlink to download dataset.
+To download dataset. Run bash script `download_data.sh` in main directory or simply click app-real hyperlink below to download dataset.
 
 Extract dataset and to a directory.
 
