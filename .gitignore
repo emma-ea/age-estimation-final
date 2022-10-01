@@ -2,3 +2,7 @@ checkpoints/
 data/
 imgs_in/
 imgs_out/
+.idea/vcs.xml
+__pycache__/
+tf_log101.zip
+live_demo*
