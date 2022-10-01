@@ -1,23 +1,32 @@
-dataset:
+# Age estimation project - final year project
+
+# Dataset
+
+To download dataset to main directory. Run bash script in data directory or simply click this hyperlink to download dataset.
+
+Extract dataset and to a directory.
 
 [appa-real](http://158.109.8.102/AppaRealAge/appa-real-release.zip)
 
-how to
+# Creating a virtual environment
 
-1. wget url
-2. make dir
-3. extract data
+To run this project, its recommended you create a virtual environment and download all needed dependencies or modules from the
+requirements.txt file using this command.
 
-to train
+1. Create virtual environment
 
-1. python train.py -h
+python -m pip install venv
 
-use '-h' for command help
+python -m venv my-environment
 
-to run test
+source env/bin/activate
 
-1. python test.py -h
+2. Install modules into virtual environment
 
-use '-h' for command help
+pip install -r requirement.txt
+
+
+# Running code
+
 
 

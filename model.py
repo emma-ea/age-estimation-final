@@ -48,7 +48,7 @@ def get_model(model_name, num_classes=101, pretrained="imagenet"):
     for param in model.parameters():
         param.requires_grad = False
 
-    # model.layer0 = ResCusNet()
+    model.layer0 = ResCusNet()
     model.last_linear = nn.Linear(model.last_linear.in_features, num_classes)
     model.avg_pool = nn.AdaptiveAvgPool2d(1)
 
