@@ -17,15 +17,15 @@ requirements.txt file using this command.
 
 1. Create virtual environment
 
-`python -m pip install venv`
+`python -m pip install virtualenv`
 
-`python -m venv my-environment`
+`python -m venv environment-name`
 
-`source env/bin/activate`
+`source environment-name/bin/activate`
 
 2. Install modules into virtual environment
 
-`pip install -r requirement.txt`
+`python -m pip install -r requirements.txt`
 
 
 # Running code
