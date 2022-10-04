@@ -6,3 +6,5 @@ imgs_out/
 __pycache__/
 tf_log101.zip
 live_demo*
+demo/
+misc/
