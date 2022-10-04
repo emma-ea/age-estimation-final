@@ -3,6 +3,8 @@ import torch.nn as nn
 import pretrainedmodels
 import pretrainedmodels.utils
 
+
+from torchviz import make_dot
 # from torchsummary import summary
 
 import ssl
@@ -48,7 +50,7 @@ def get_model(model_name, num_classes=101, pretrained="imagenet"):
     for param in model.parameters():
         param.requires_grad = False
 
-    model.layer0 = ResCusNet()
+    # model.layer0 = ResCusNet()
     model.last_linear = nn.Linear(model.last_linear.in_features, num_classes)
     model.avg_pool = nn.AdaptiveAvgPool2d(1)
 
@@ -57,8 +59,15 @@ def get_model(model_name, num_classes=101, pretrained="imagenet"):
 
 def main():
     model = get_model(model_name_)
-    # print(summary(model, (244, 244, 3)))
-    print(model)
+    print(model.parameters)
+    # res = model.forward()
+    # make_dot(res)
+    # make_dot(yhat, params=dict(list(model.named_parameters()))).render("resnext101_torchviz", format="png")
+    # print(model)
+
+    total_params = sum(param.numel() for param in model.parameters())
+    total_trainable = sum(param.numel() for param in model.parameters() if param.requires_grad)
+    print(total_params, total_trainable)
 
 
 if __name__ == '__main__':
