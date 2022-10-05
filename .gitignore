@@ -1,10 +1,7 @@
 checkpoints/
-data/
-imgs_in/
-imgs_out/
+data/appa-real-release/
 .idea/vcs.xml
 __pycache__/
-tf_log101.zip
-live_demo*
 demo/
-misc/
+demo_res/
+data/appa-real-release/
