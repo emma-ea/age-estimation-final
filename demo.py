@@ -105,7 +105,7 @@ def main():
 
         if not resume_path.is_file():
             print(f"=> model path is not set; start downloading trained model to {resume_path}")
-            url = "https://github.com/emma-ea/age-estimation-final/releases/v1.0/epoch072_0.03446_7.5562.pth"
+            url = "https://github.com/emma-ea/age-estimation-final/releases/v1/epoch072_0.03446_7.5562.pth"
             urllib.request.urlretrieve(url, str(resume_path))
             print("=> download finished")
 
